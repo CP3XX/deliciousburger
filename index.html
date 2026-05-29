@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Burguer</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🍔 Delicious Burguer</h1>
+
+    <input type="text" id="nombre" placeholder="Tu nombre">
+
+    <input type="tel" id="telefono" placeholder="Número de teléfono">
+
+    <select id="hamburguesa">
+      <option>Hamburguesa clásica</option>
+      <option>Especial</option>
+      <option>Ranchera</option>
+      <option>Super Burguer</option>
+      <option>Super Ranchera</option>
+    </select>
+
+    <h3>Personalizar</h3>
+
+    <label>
+      <input type="checkbox" id="contodo">
+      Con todo
+    </label>
+
+    <label>
+      <input type="checkbox" id="sincebolla">
+      Sin cebolla
+    </label>
+
+    <label>
+      <input type="checkbox" id="sinlechuga">
+      Sin lechuga
+    </label>
+
+    <label>
+      <input type="checkbox" id="sinsalsa">
+      Sin salsa
+    </label>
+
+    <h3>Extras</h3>
+
+    <label>
+      <input type="checkbox" id="gaseosa">
+      Gaseosa personal
+    </label>
+
+    <textarea id="direccion" placeholder="Dirección"></textarea>
+
+    <select id="pago">
+      <option>Efectivo</option>
+      <option>Transferencia</option>
+    </select>
+
+    <button onclick="enviarPedido()">
+      Pedir por WhatsApp
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
