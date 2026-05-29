@@ -1,73 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Super Burguer</title>
+  <title>Delicious Burguer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="container">
+  <!-- LOGIN -->
 
-    <h1>🍔 Delicious Burguer</h1>
+  <section id="login">
 
-    <input type="text" id="nombre" placeholder="Tu nombre">
+    <h1>Bienvenido</h1>
+    <h2>Delicious Burguer</h2>
 
-    <input type="tel" id="telefono" placeholder="Número de teléfono">
+    <input type="text" id="nombre" placeholder="Nombre y apellido">
 
-    <select id="hamburguesa">
-      <option>Hamburguesa clásica</option>
-      <option>Especial</option>
-      <option>Ranchera</option>
-      <option>Super Burguer</option>
-      <option>Super Ranchera</option>
-    </select>
+    <input type="number" id="telefono" placeholder="Número telefónico">
 
-    <h3>Personalizar</h3>
+    <input type="text" id="direccion" placeholder="Dirección">
 
-    <label>
-      <input type="checkbox" id="contodo">
-      Con todo
-    </label>
+    <button onclick="entrar()">ENTRAR</button>
 
-    <label>
-      <input type="checkbox" id="sincebolla">
-      Sin cebolla
-    </label>
+  </section>
 
-    <label>
-      <input type="checkbox" id="sinlechuga">
-      Sin lechuga
-    </label>
+  <!-- CATEGORÍAS -->
 
-    <label>
-      <input type="checkbox" id="sinsalsa">
-      Sin salsa
-    </label>
+  <section id="categorias" class="oculto">
 
-    <h3>Extras</h3>
+    <h1>Bienvenido</h1>
 
-    <label>
-      <input type="checkbox" id="gaseosa">
-      Gaseosa personal
-    </label>
+    <div class="categorias">
 
-    <textarea id="direccion" placeholder="Dirección"></textarea>
+      <button class="circulo" onclick="mostrarMenu()">
+        Hamburguesas
+      </button>
 
-    <select id="pago">
-      <option>Efectivo</option>
-      <option>Transferencia</option>
-    </select>
+      <button class="circulo">
+        Pizzas
+      </button>
 
-    <button onclick="enviarPedido()">
-      Pedir por WhatsApp
+    </div>
+
+  </section>
+
+  <!-- MENU -->
+
+  <section id="menu" class="oculto">
+
+    <h1>Delicious Burguer</h1>
+
+    <div id="productos"></div>
+
+    <button class="carrito-btn" onclick="verCarrito()">
+      🛒 Ver carrito
     </button>
 
-  </div>
+  </section>
+
+  <!-- PERSONALIZAR -->
+
+  <section id="personalizar" class="oculto">
+
+    <img id="imgProducto" src="" alt="">
+
+    <h2 id="nombreProducto"></h2>
+
+    <h3 id="precioProducto"></h3>
+
+    <div class="checks">
+
+      <label>
+        <input type="checkbox" id="conTodo">
+        Con todo
+      </label>
+
+      <label>
+        <input type="checkbox" class="opcion">
+        Sin cebolla
+      </label>
+
+      <label>
+        <input type="checkbox" class="opcion">
+        Sin salsa de piña
+      </label>
+
+      <label>
+        <input type="checkbox" class="opcion">
+        Sin vegetales
+      </label>
+
+      <label>
+        <input type="checkbox" class="opcion">
+        Sin salsas
+      </label>
+
+    </div>
+
+    <button onclick="agregarCarrito()">
+      AGREGAR
+    </button>
+
+  </section>
+
+  <!-- CARRITO -->
+
+  <section id="carrito" class="oculto">
+
+    <h1>Tu pedido</h1>
+
+    <div id="listaCarrito"></div>
+
+    <hr>
+
+    <h3>Domicilio: $2.000</h3>
+
+    <div class="gaseosas">
+
+      <h3>Gaseosa personal ($2500)</h3>
+
+      <div class="contador">
+
+        <button onclick="menosGaseosa()">-</button>
+
+        <span id="cantidadGaseosa">0</span>
+
+        <button onclick="masGaseosa()">+</button>
+
+      </div>
+
+    </div>
+
+    <div class="metodo">
+
+      <h3>Método de pago</h3>
+
+      <label>
+        <input type="radio" name="pago" value="Efectivo">
+        Efectivo
+      </label>
+
+      <label>
+        <input type="radio" name="pago" value="Transferencia">
+        Transferencia
+      </label>
+
+    </div>
+
+    <h2 id="total"></h2>
+
+    <button onclick="realizarPedido()">
+      📲 Realizar pedido
+    </button>
+
+  </section>
 
   <script src="script.js"></script>
 
