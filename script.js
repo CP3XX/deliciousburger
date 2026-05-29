@@ -303,7 +303,7 @@ function realizarPedido(){
 💳 Método de pago:
 ${metodo.value}`;
 
-  let numeroNegocio = "573001234567";
+  let numeroNegocio = "573028283463";
 
   let url = `https://wa.me/${numeroNegocio}?text=${encodeURIComponent(mensaje)}`;
 
