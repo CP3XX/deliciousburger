@@ -10,21 +10,21 @@ let productos = [
   {
     nombre: "Hamburguesa Especial",
     precio: 15500,
-    descripcion: "Carne, queso, jamón, tocineta, cebolla, tomate.",
+    descripcion: "Carne, queso, jamón, tocineta, cebolla, tomate, lechuga, papas chips.",
     imagen: "https://i.imgur.com/rM0J6QF.png"
   },
 
   {
     nombre: "Hamburguesa Ranchera",
     precio: 16500,
-    descripcion: "Carne, queso, chorizo, jamón, papas chips.",
+    descripcion: "Carne, queso, chorizo, jamón, tocineta, cebolla, tomate, lechuga, papas chips.",
     imagen: "https://i.imgur.com/6Xz8B6X.png"
   },
 
   {
     nombre: "Hamburguesa Super Ranchera",
     precio: 20500,
-    descripcion: "Doble carne, doble queso, jamón, chorizo.",
+    descripcion: "Doble carne, doble queso, chorizo, jamon, tocineta, cebolla, tomate, lechuga, papas chips.",
     imagen: "https://i.imgur.com/1q9Z1Zm.png"
   }
 
